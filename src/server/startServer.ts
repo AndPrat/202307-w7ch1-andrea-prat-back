@@ -1,5 +1,5 @@
 import debugCreator from "debug";
-import app from "./server/index.js";
+import app from "./index.js";
 
 const debug = debugCreator("robots:server:start");
 
