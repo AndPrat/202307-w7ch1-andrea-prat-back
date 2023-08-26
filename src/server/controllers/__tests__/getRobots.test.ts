@@ -29,7 +29,7 @@ describe("Given robotsControllers controller", () => {
       expect(res.status).toHaveBeenCalledWith(expectedStatusCode);
     });
 
-    test("Then it should call its method jhon with 'Wall-e', 'Eva', 'BayMax'", async () => {
+    test("Then it should call its method jhon with 'Wall-e', 'Eva'", async () => {
       await getRobots(req as Request, res as Response, next);
 
       expect(res.json).toHaveBeenCalledWith({ robots: robotsMock });
