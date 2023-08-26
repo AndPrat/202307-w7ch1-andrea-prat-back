@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import type RobotStructure from "./Types.js";
+import { type RobotStructure } from "./types.js";
 
 const robotSchema = new Schema<RobotStructure>({
   name: {

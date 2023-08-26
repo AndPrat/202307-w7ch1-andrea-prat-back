@@ -17,4 +17,6 @@ jobs:
       - name: 🧪 Testing
         run: npm test
         env:
+          PORT: ${{secrets.PORT}}
+          DEBUG: ${{secrets.DEBUG}}
           MONGODB_URL: ${{ secrets.MONGODB_URL}}

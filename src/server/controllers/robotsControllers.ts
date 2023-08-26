@@ -12,7 +12,7 @@ export const getRobots = async (
     res.status(200).json({ robots });
   } catch (error: unknown) {
     const customError = new CustomError(
-      "Can't retrive the things",
+      "Can't retrive the robots",
       500,
       (error as Error).message,
     );
