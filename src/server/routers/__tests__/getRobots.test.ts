@@ -28,7 +28,7 @@ describe("Given a GET '/robots' endpoint", () => {
   });
 
   describe("When it receives a request", () => {
-    test("Then it should respond with status 200 with 'Wall-e', 'Eva', 'BayMax'", async () => {
+    test("Then it should respond with status 200 with 'Wall-e', 'Eva'", async () => {
       const expectedStatusCode = 200;
       const robotsPath = "/robots";
 
