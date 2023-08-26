@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { type RobotStructure } from "../database/models/patataFrita.js";
+import { type RobotStructure } from "../database/models/types.js";
 
 export const idRobot = new mongoose.Types.ObjectId().toString();
 
