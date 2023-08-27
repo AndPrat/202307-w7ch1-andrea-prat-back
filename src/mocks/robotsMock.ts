@@ -15,7 +15,8 @@ export const robotsMock: RobotStructure[] = [
   {
     _id: new mongoose.Types.ObjectId().toString(),
     name: "Eva",
-    image: "https://www.spotern.com/es/product/67321?spotID=97980",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470764123221-X38RPP1B2D97VHELY7BA/Eve10.jpg?format=1500w",
     speed: "8",
     endurance: "7",
   },
