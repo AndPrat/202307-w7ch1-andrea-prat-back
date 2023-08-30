@@ -1,11 +1,14 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import request from "supertest";
+import app from "../..";
 import connectToDatabase from "../../../database/connectToDatabase.js";
 import Robot from "../../../database/models/Robot.js";
 import type RobotStructure from "../../../database/models/types.js";
-import app from "../..";
 import { robotsMock } from "../../../mocks/robotsMock.js";
+
+jest.mock("firebase-admin");
+
 let server: MongoMemoryServer;
 
 beforeAll(async () => {

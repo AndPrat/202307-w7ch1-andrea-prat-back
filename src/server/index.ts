@@ -1,8 +1,9 @@
+import cors from "cors";
 import express from "express";
 import morgan from "morgan";
-import cors from "cors";
-import { endpointNotFound, generalErrorHandler } from "./middlewares/errors.js";
 import pingController from "./controllers/ping/PingController.js";
+import auth from "./middlewares/auth.js";
+import { endpointNotFound, generalErrorHandler } from "./middlewares/errors.js";
 import robotsRouter from "./routers/robotsRouter.js";
 
 const app = express();
@@ -19,7 +20,7 @@ app.use(
 );
 
 app.get("/", pingController);
-app.use("/robots", robotsRouter);
+app.use("/robots", auth, robotsRouter);
 
 app.use(endpointNotFound);
 app.use(generalErrorHandler);
